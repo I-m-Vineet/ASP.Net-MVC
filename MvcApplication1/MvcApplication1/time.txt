@@ -1,0 +1,4 @@
+LongRunningAction action execution started at: 11-10-2015 12:30:16
+LongRunningAction action execution finished at: 11-10-2015 12:30:21
+Total seconds: 10
+An exception also occured: Some exception was thrown from this action

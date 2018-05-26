@@ -1,0 +1,54 @@
+*ASP.NET MVC Scaffolding
+
+	@Html.TextBox("txtname");
+		<input type="text" id="txtname" name="txtname"/>
+	@Html.TextBoxFor(x=>x.Name);
+		<input type="text" id="Name" name="Name"/>
+
+	<p>
+		User Name: @Html.EditorFor(x=>x.UserName);
+	</p>
+				@Html.EditorForModel();
+
+
+*Creating custom editor templates
+	a. Create a .cshtml file inside "Views/Shared/EditorTemplates folder"
+	b. The filename must  be the return type name of the model property.
+
+
+*Action Filters in ASP.NET MVC
+		1. Predefined
+			a. Authentication/Authorization Filters
+			b. Action filters
+			c. Result  filters
+			d. Exception  Filters
+		*[HandleError]
+			[HandleError]	//at   controller level
+			public class HomeController : Controller
+			{
+				[HandleError]	//action method level
+				//some action method
+			}
+		*[Authorize]
+		*[OutputCache]
+*Creating custom  action filters
+	a.  Create a class inheriting from System.Web.Mvc.ActionFilter attribute.
+
+			//OnActionExecuting() - ActionExecutingContext
+			public ActionResult Index()
+			{
+				//action method code line1
+				//action method code line2
+			//OnActionExecuted() - ActionExecutedContext
+
+			//OnResultExecuting() - ResultExecutingContext
+				return View();
+			//OnResultExecuted() - ResultExecutedContext
+			}
+
+
+		
+
+		
+
+
